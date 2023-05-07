@@ -4,8 +4,8 @@
 기업에서 사용할 휴가 관리 시스템을 제공합니다.
 
 EX)
-<img width="132" alt="readme_img1" src="https://user-images.githubusercontent.com/126394721/236672788-48190f56-4f2b-450e-8485-80c9f69be055.png">
-<img width="133" alt="readme_img2" src="https://user-images.githubusercontent.com/126394721/236672822-fdb7aa27-e584-4bfc-9fa8-192979af9846.png">
+<img width="132" height="50" alt="readme_img1" src="https://user-images.githubusercontent.com/126394721/236672788-48190f56-4f2b-450e-8485-80c9f69be055.png">
+<img width="132" height="50" alt="readme_img2" src="https://user-images.githubusercontent.com/126394721/236672822-fdb7aa27-e584-4bfc-9fa8-192979af9846.png">
 
 ## miniproject 소개
 - 기업이 휴가를 효과적으로 관리할 수 있게 도와줍니다.
