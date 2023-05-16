@@ -11,9 +11,25 @@ typedef struct {
   char approval; // 승인 상태, 미처리 상태면 '-' 승인이면 'Y', 불허면 'N'
 } Info;
 
+
 int selectMenu_Employee(){
-    return 1;
+   int menu;
+   printf("\n*** 휴가 관리 프로그램 ***\n");
+   printf("1. 휴가 신청\n");
+   printf("2. 휴가 조회\n");
+   printf("3. 휴가 삭제\n");
+   printf("4. 휴가 수정\n");
+   printf("5. 저장\n");
+   printf("6. 불러오기\n");
+   printf("7. 이름 검색\n");
+   printf("8. 종료\n");
+   printf("=> 원하는 메뉴는? ");
+   scanf("%d", &menu);
+   printf("\n");
+   return menu;
 };
+
+
 int addlist_Employee(Info* a[], int index){
     return 1;
 }; // 휴가를 추가하는 함수
