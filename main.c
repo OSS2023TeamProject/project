@@ -23,18 +23,36 @@ int main(void){
             menu = selectMenu_Employee();
             if (menu == 0) break;
             
-            switch(menu){
-                case 1:
+            switch (menu) {
+     	        case 1:
+               	    addlist_Employee(a, index);
+       	            break;
+                case 2:
+                    readlist_Employee(a, index);
+                    break;
+                case 3:
+                    deletelist_Employee(a, index);
+                    break;
+                case 4:
+                    updatelist_Employee(a, index);
+                    break;
+                case 5:
+                    saveData_Employee(a, index);
+                    break;
+                case 6:
+                    loadData_Employee(a, index);
+                    break;
+                case 7:
+                    searchName_Employee(a, index);
                     break;
                 default:
+                    printf("Error!\n");
                     break;
-
-            }
-        }
-        
-
-        
+     		 }
+   	 }
     }
+
+
     else if(kind_menu == 2){ // manager
         index = loadData_Manager(a, index);
 
