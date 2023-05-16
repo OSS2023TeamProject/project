@@ -30,9 +30,24 @@ int selectMenu_Employee(){
 };
 
 
-int addlist_Employee(Info* a[], int index){
+int addlist_Employee(Info* a[], int index){ //휴가 추가함수
+    getchar();                                 // 버퍼 비우기
+    printf("\n[ 휴가 신청 ]\n");
+    printf("이름 : ");
+    fgets(a[index]->name, sizeof(a[index]->name), stdin);
+    a[index]->name[strlen(a[index]->name) - 1] = '\0'; // 개행문자 제거
+    printf("부서명 : ");
+    fgets(a[index]->department, sizeof(a[index]->department), stdin);
+
+    a[index]->department[strlen(a[index]->department) - 1] ='\0'; // 개행문자 제거
+    printf("시작 날짜 (yyyymmdd) : ");
+    scanf("%s", a[index]->start);
+    printf("끝나는 날짜 (yyyymmdd) : ");
+    scanf("%s", a[index]->end);
+    a[index]->approval = '-'; // 미처리 상태
+    printf("=> 휴가 신청이 완료되었습니다.\n");
     return 1;
-}; // 휴가를 추가하는 함수
+}; 
 void readlist_Employee(Info* a[], int index){
 
 };
