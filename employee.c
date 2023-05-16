@@ -59,10 +59,23 @@ void readlist_Employee(Info* a[], int index){
   }
 }
 
-
+//사용자가 입력한 인덱스에 해당하는 휴가 정보를 삭제하는 함수
 int deletelist_Employee(Info* a[], int index){
+    if (index < 0) {
+   	 printf("존재하지 않는 인덱스입니다.\n");
+    return 0;
+  }
+    if (a[index] == NULL) {
+   	 printf("이미 삭제된 정보입니다.\n");
+    return 0;
+  }
+    free(a[index]);  // 동적 할당된 메모리 해제
+    a[index] = NULL; // 포인터를 NULL로 초기화
+    printf("삭제되었습니다.\n");
     return 1;
-};
+}
+
+
 void updatelist_Employee(Info* a[], int index){
 
 };
