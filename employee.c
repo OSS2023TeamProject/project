@@ -75,10 +75,31 @@ int deletelist_Employee(Info* a[], int index){
     return 1;
 }
 
-
+//사용자가 입력한 인덱스에 해당하는 휴가 정보를 수정하는 함수
 void updatelist_Employee(Info* a[], int index){
+    if (index < 0) {
+   	 printf("존재하지 않는 인덱스입니다.\n");
+    return;
+  }
+    if (a[index] == NULL) {
+   	 printf("이미 삭제된 정보입니다.\n");
+    return;
+  }
+    printf("수정할 정보를 입력하세요.\n");
+    printf("이름 : ");
+    scanf("%s", a[index]->name);
+    printf("부서명 : ");
+    scanf("%s", a[index]->department);
+    printf("시작 날짜 : ");
+    scanf("%s", a[index]->start);
+    printf("끝나는 날짜 : ");
+    scanf("%s", a[index]->end);
+    printf("승인 상태(-:미처리, Y:허가, N:불허) : ");
+    scanf(" %c", &a[index]->approval);
+    printf("수정되었습니다.\n");
+}
 
-};
+
 void saveData_Employee(Info* a[], int index){
 
 };
