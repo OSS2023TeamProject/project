@@ -117,10 +117,32 @@ void saveData_Employee(Info* a[], int index){
   printf("저장되었습니다.\n");
 }
 
-
+//프로그램을 실행할 때 파일에서 휴가 정보를 읽어오는 함수
+//파일에서 한 줄씩 읽어서 구조체 변수에 저장
 int loadData_Employee(Info* a[], int index){
+    FILE *fp;
+    fp = fopen("employee.txt", "r");
+    if (fp == NULL) {
+   	 printf("=> 파일 없음\n");
+    return 0;
+  }
+    int i = 0;
+    while (feof(fp) == 0) {
+    	a[i] = (Info *)malloc(sizeof(Info));
+    	fscanf(fp, "%s", a[i]->name);
+    	fscanf(fp, "%s", a[i]->department);
+    	fscanf(fp, "%s", a[i]->start);
+    	fscanf(fp, "%s", a[i]->end);
+    	fscanf(fp, "%s", &a[i]->approval);
+    	i++;
+  }
+    index = i - 1;
+    printf("=> 로딩 성공!\n");
+    fclose(fp);
     return 1;
-};
+}
+
+
 int searchName_Employee(Info* a[], int index){
     return 1;
 }; // 해당 함수를 통해 원하는 이름의 index를 반환
