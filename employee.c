@@ -27,7 +27,7 @@ int selectMenu_Employee(){
    scanf("%d", &menu);
    printf("\n");
    return menu;
-};
+}
 
 
 int addlist_Employee(Info* a[], int index){ //휴가 추가함수
@@ -47,10 +47,19 @@ int addlist_Employee(Info* a[], int index){ //휴가 추가함수
     a[index]->approval = '-'; // 미처리 상태
     printf("=> 휴가 신청이 완료되었습니다.\n");
     return 1;
-}; 
-void readlist_Employee(Info* a[], int index){
+} 
 
-};
+
+void readlist_Employee(Info* a[], int index){
+    printf("\n[ 휴가 조회 ]\n");
+    printf("이름\t부서명\t시작 날짜\t끝나는 날짜\t승인 상태\n");
+    printf("——————————————————————————\n");
+    for (int i = 0; i < index; i++) {
+      printf("%s\t%s\t%s\t%s\t%c\n", a[i]->name, a[i]->department, a[i]->start, a[i]->end, a[i]->approval);
+  }
+}
+
+
 int deletelist_Employee(Info* a[], int index){
     return 1;
 };
