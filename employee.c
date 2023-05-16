@@ -99,10 +99,25 @@ void updatelist_Employee(Info* a[], int index){
     printf("수정되었습니다.\n");
 }
 
-
+//프로그램을 종료하기 전에 휴가 정보를 파일에 저장하는 함수
+//구조체 변수의 내용을 파일에 한 줄씩 저장
 void saveData_Employee(Info* a[], int index){
+    FILE *fp;
+    fp = fopen("employee.txt", "wt");
+    if (fp == NULL) {
+   	 printf("파일 열기 실패\n");
+    return;
+  }
+    for (int i = 0; i < index; i++) {
+   	 if (a[i] == NULL)
+        	 continue; // 삭제된 정보는 저장하지 않음
+    fprintf(fp, "%s %s %s %s %c\n", a[i]->name, a[i]->department, a[i]->start, a[i]->end, a[i]->approval);
+  }
+  fclose(fp);
+  printf("저장되었습니다.\n");
+}
 
-};
+
 int loadData_Employee(Info* a[], int index){
     return 1;
 };
