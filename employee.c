@@ -142,7 +142,17 @@ int loadData_Employee(Info* a[], int index){
     return 1;
 }
 
-
+// 해당 함수를 통해 원하는 이름의 index를 반환
 int searchName_Employee(Info* a[], int index){
-    return 1;
-}; // 해당 함수를 통해 원하는 이름의 index를 반환
+    char search[20];
+    printf("검색할 이름을 입력해주세요 : ");
+    scanf("%s", search);
+    for (int i = 0; i < index; i++) {
+    	if (strcmp(a[i]->name, search) == 0) {
+      		printf("검색 결과 : %s %s %s %s %c\n", a[i]->name, a[i]->department, a[i]->start, a[i]->end, a[i]->approval);
+      return 1; //검색 결과가 있을 때 1리턴
+    }
+  }
+    printf("=> 검색된 결과가 없습니다.\n");
+    return 0; //없으면 0리턴
+}
