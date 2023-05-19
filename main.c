@@ -7,7 +7,7 @@
 //#include "infomation.h"
 
 int main(void){
-    Info* a[20];
+    Inf* a[20];
     int index = 0;
     int menu;
 
@@ -25,25 +25,19 @@ int main(void){
             
             switch (menu) {
      	        case 1:
-               	    addlist_Employee(a, index);
+               	    index += addlist_Employee(a, index);
        	            break;
                 case 2:
                     readlist_Employee(a, index);
                     break;
                 case 3:
-                    deletelist_Employee(a, index);
+                    index -= deletelist_Employee(a, index);
                     break;
                 case 4:
                     updatelist_Employee(a, index);
                     break;
                 case 5:
                     saveData_Employee(a, index);
-                    break;
-                case 6:
-                    loadData_Employee(a, index);
-                    break;
-                case 7:
-                    searchName_Employee(a, index);
                     break;
                 default:
                     printf("Error!\n");
