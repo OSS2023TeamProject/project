@@ -33,6 +33,8 @@ EX)
 
 각 기능에 대한 함수는 WIKI page에 정리하였습니다.
 
+link : https://github.com/OSS2023TeamProject/project/wiki/WIKI
+
 ## 개발환경 및 언어
 git과 C언어를 이용하여 프로젝트를 진행하였습니다.
 
