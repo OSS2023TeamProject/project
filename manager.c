@@ -25,12 +25,12 @@ void approve_Manager(Inf* a[], int index){
     char ch;
     readList_Manager(a, index);
     
-    printf("승인 또는 미승인하고 싶은 번호: ");
+    printf("\n승인 또는 미승인하고 싶은 번호: ");
     scanf("%d", &num);
     num--;
     getchar();
     if(num < index && num >= 0){
-        printf("승인하시려면 Y를 거절하시려면 N을 누르세요");
+        printf("\n승인하시려면 Y를, 거절하시려면 N을 누르세요. ");
         scanf("%c", &ch);
         a[num]->approval = ch;
     }
@@ -119,7 +119,7 @@ void saveData_Manager(Inf* a[], int index){
 
 int searchName_Manager(Inf* a[], int index){
   char search[20];
-  printf("검색할 이름을 입력해주세요 : ");
+  printf("\n검색할 이름을 입력해주세요 : ");
   scanf("%s", search);
   for (int i = 0; i < index; i++) {
     if (strcmp(a[i]->name, search) == 0) {
