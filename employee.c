@@ -37,14 +37,14 @@ int addlist_Employee(Inf* a[], int index){ //휴가 추가함수
     printf("이름 : ");
     fgets(ptr->name, sizeof(ptr->name)+1, stdin);
     ptr->name[strlen(ptr->name) - 1] = '\0'; // 개행문자 제거
-    printf("[중복체크]\n");
+    printf("\n[중복체크]\n");
 
     if(checkDuplicated(a, index, ptr->name) == 1){
       printf("중복되었습니다\n");
       return 0;
     }
     printf("중복되지 않았습니다. 다음 과정을 진행해주세요.\n");
-    printf("부서명 : ");
+    printf("\n부서명 : ");
     fgets(ptr->department, sizeof(ptr->department)+1, stdin);
 
     ptr->department[strlen(ptr->department) - 1] ='\0'; // 개행문자 제거
@@ -136,11 +136,11 @@ void updatelist_Employee(Inf* a[], int index){
   }
   
   if(flag == 1){
-    printf("정말로 수정하시겠습니까? (Yes: 1, No: 2)");
+    printf("\n정말로 수정하시겠습니까? (Yes: 1, No: 2)");
     scanf("%d", &confirm);
 
     if(confirm == 1){
-      printf("수정할 정보를 입력하세요.\n");
+      printf("\n수정할 정보를 입력하세요.\n");
       printf("이름 : ");
       scanf("%s", a[idx]->name);
       printf("부서명 : ");
