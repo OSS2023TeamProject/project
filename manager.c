@@ -116,17 +116,3 @@ void saveData_Manager(Inf* a[], int index){
     printf("저장되었습니다.\n");
     return;
 };
-
-int searchName_Manager(Inf* a[], int index){
-  char search[20];
-  printf("\n검색할 이름을 입력해주세요 : ");
-  scanf("%s", search);
-  for (int i = 0; i < index; i++) {
-    if (strcmp(a[i]->name, search) == 0) {
-      return i;
-    }
-  }
-
-  printf("=> 검색된 결과가 없습니다.\n");
-  return -1; //없으면 0리턴
-}
